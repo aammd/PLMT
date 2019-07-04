@@ -5,40 +5,53 @@
 
 ## Introduction
 
+#### Networks are useful and important
 Ecological networks are a useful way to think about ecological systems, and recently there has been an explosion of interest in them. This interest has motivated two efforts: an expansion of the tools used to investigate ecological networks, and an increase data collection efforts. In order for both of these efforts to progress, we need a means for ecologists to share and access high-quality network data. Mangal responds to this need, by providing an online database of open network data. Our purpose in the current document is threefold:
 1. to describe updates and improvements to the Mangal project
 2. to demonstrate the kinds of analyses possible through worked examples
 3. to highlight the need for more empirical network data, especially in undersampled regions.
 
-Mangal is an actively developed project which has recently been expanded and improved. An earlier manuscript (Poisot et al 2015 [tk]) set out
+#### (re) Introducing Mangal
+Mangal is an actively developed project which has recently been expanded and improved.
+* An earlier manuscript (Poisot et al 2015 [tk]) described Mangal as an online platform allowing ecologists to share data about ecological networks
 * New technical improvements include:
 * New data
   - number and amount of new information
 * web API for better data access, and two packages (one in Julia, the other in R) for accessing these data.
+* Mangal in its current form offers open network data that is ready to support synthesis at many scales.
 <!-- I don't think these would literally be a numbered list but it might be a start -->
 
-## Accessing data
+#### Ecological synthesis
+Synthesizing ecological data presents important challenges and also some exciting opportunities. Mangal is well suited to offer such opportunities in the study of ecological networks.
+* A major challenge to ecological synthesis is generalizing from samples to the behaviour of ecological systems
+* two obstacles to such generalizing in ecological systems: data coverage and data quality
+  - data coverage: are data collected from every relevant system?
+  - data quality: are data fit-for-purpose? Two particular aspects of quality
+    - taxonomic resolution
+    - sampling effort
 
-Mangal is an open database, meaning that the data included in it can be freely accessed and used by researchers.
-<!-- is there an access token required -->
+#### Coverage
 
-## coverage of Mangal
+This database documents the impressive efforts of (generations of?) ecologists who have sampled nearly every continent and climatic zone, as well as various taxonomic groups and interaction types.
 
-Users of Mangal will naturally wonder "how much" data are available: where and when were data collected, and for what kind of networks? To demonstrate the coverage of the database, and to demonstrate its use, we show several different views of the data.
+* _Coverage in geographic space._ Mangal now contains information from all over the world, and from every continent except Antarctica. <!-- map from vignette -->
+* _Coverage in climate space_ Early ecologists identified the earth's biomes based on combinations of temperature and precipitation. Here we demonstrate that Mangal datasets have been sampled from across these different biomes. In doing so, we also demonstrate how climate data can be downloaded and combined with Mangal records. <!-- Whittaker biome plot -->
 
-### Coverage in geographic space
+#### Data quality: sampling effort and taxonomy
+Sampling effort and taxonomic detail are two very challenging but important part of any ecological dataset. The datasets in Mangal represent some of the most detailed studies of ecological networks available.
+* measures of network structure may be particularly sensitive to the amount of sampling effort
+* repeat sampling may be necessary to capture a "saturation" of interactions.
+* we present some visualization of the sampling coverage of Mangal [tk]
+* High taxonomic resolution is difficult to achieve in ecology, especially depending on the sampling method used (e.g. gut contents vs observations). We present a breakdown of the taxonomic resolution of Mangal.
+* Ecological networks occur in various kinds, but they are not all equally well sampled. We present a breakdown of the number of parasitic, mutualistic and predator-prey networks sampled in Mangal
+<!-- perhaps this could be a 3-panel figure -->
 
-Mangal now contains information from all over the world, and from every continent except Antarctica.
-<!-- map from vignette -->
-
-### Coverage in climate space
-
-Early ecologists identified the earth's biomes based on combinations of temperature and precipitation. Here we demonstrate that Mangal datasets have been sampled from across these different biomes. In doing so, we also demonstrate how climate data can be downloaded and combined with Mangal records.
-<!-- Whittaker biome plot -->
-
-### Network types and taxonomy
-breakdown of network types (parasitic, mutualistic) and the taxa represented.
-<!-- table? or bar chart? -->
+#### reducing uncertainty through 'analogues'
+When we lack direct observation of a community, often we must resort to the use of 'analog' communities -- that is, communities which are similar in space or environment which have been sampled.
+* Communities may be similar in at least two ways -- close in space, or close in climate
+* similarity may result in some (?) similarity in network structure, even if species different.
+* Always some uncertainty in such comparisons
+* reflects the need for more data gathering, can be used to target efforts
 
 ## Ecological analyses using Mangal
 
